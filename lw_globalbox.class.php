@@ -3,7 +3,7 @@
 /**************************************************************************
 *  Copyright notice
 *
-*  Copyright 2011 Logic Works GmbH
+*  Copyright 2011-2012 Logic Works GmbH
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -24,8 +24,7 @@ class lw_globalbox extends lw_plugin
 	function __construct()
 	{
 		parent::__construct();
-		$reg = lw_registry::getInstance();
-		$this->repository = $reg->getEntry("repository");
+		$this->repository = lw_registry::getInstance()->getEntry("repository");
 	}
 	
 	function buildPageOutput()
